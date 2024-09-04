@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YCookers</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        nav a:hover {
+            color: #d09a4c;
+        }
+
+        .main-content {
+            text-align: center;
+            color: white;
+            padding: 60px 20px;
+            background-image: url('img1.jfif'); /* Background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+		
+        .navbar-brand img {
+            max-height: 50px;
+        }
+
+        }
+
+        h3 {
+            color: #8b5e3c;
+            text-align: center;
+        }
+
+        .recipe-link {
+            text-decoration: none;
+            color: #8b5e3c;
+            font-size: 1.5em;
+        }
+
+        .recipe-link:hover {
+            text-decoration: underline;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #cf9b77;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+		
+    </style>
+</head>
+
+<body>
+    
+<header>
+    <div class="logo">
+        <img src="logo.jfif" alt="YCookers Logo">
+        <h1>YCookers</h1>
+    </div>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Login.html">Login</a>
+        <a href="Categories.html">Recipes Categories</a>
+        <a href="Add Recipes.html ">Add Recipes</a>
+    </nav>
+</header>
+    <!-- Login Form -->
+    <div id="login-section" class="container mt-5">
+        <h1 class="text-center">Login</h1>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+    <!-- Welcome Section -->
+    <div id="welcome-section" class="container text-center mt-5 hidden">
+        <h1 id="welcome-message" style="font-family:Forte ;">Hi, </h1>&nbsp;&nbsp;
+        <p style="font-family: Georgia, serif; font-size:40px">What would you like to cook today?</p>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="recipe-card">
+                    <a href="sweet.html" class="recipe-link">
+                        <img src="sw.jfif" alt="Sweet">&nbsp;&nbsp;&nbsp;
+                        <h3 style="font-family:Forte">Sweet</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="recipe-card">
+                    <a href="Main Dish.html" class="recipe-link">
+                        <img src="md.jfif" alt="Main Dish">&nbsp;&nbsp;&nbsp;
+                        <h3 style="font-family:Forte" >Main dish</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="recipe-card">
+                    <a href="Entrees.html" class="recipe-link">
+                        <img src="en.jpeg" alt="Entrees">&nbsp;&nbsp;&nbsp;
+                        <h3 style="font-family:Forte">Entrees</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 YCookers. All Rights Reserved.</p>
+    </div>
+
+    <!-- JavaScript to handle login and display welcome message -->
+	<script>
+        function loadRecipes(category) {
+            const recipes = localStorage.getItem(category) || "";
+            document.getElementById('recipe-list').innerHTML = recipes;
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+            showWelcomeMessage(username);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const username = localStorage.getItem('username');
+            if (username) {
+                showWelcomeMessage(username);
+            }
+        });
+
+        function showWelcomeMessage(username) {
+            document.getElementById('login-section').classList.add('hidden');
+            document.getElementById('welcome-message').textContent = `Hi, ${username}!`;
+            document.getElementById('welcome-section').classList.remove('hidden');
+        }
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

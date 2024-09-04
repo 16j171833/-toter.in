@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to YCookers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+	    header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        nav a:hover {
+            color: #d09a4c;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .til {
+            font-family: 'Brush Script MT', cursive;
+            color: #8b5e3c;
+            margin-top: 20px;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .recipe-card {
+            margin: 20px;
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.5em;
+            color: black;
+            width: 18rem;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .recipe-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .recipe-title {
+            font-family: 'Brush Script MT', cursive;
+            color: black;
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .recipe-description {
+		font-family:  Comic Sans MS;
+            font-size: 0.6em;
+            color: #777;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #cf9b77;
+            text-align: center;}
+			
+        .read-more {
+            font-size: 1em;
+            color: #d09a4c;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .collapse-content {
+		font-family:  Comic Sans MS;
+            font-size: 0.5em;
+            text-align: left;
+            margin-top: 10px;
+           
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.jfif" alt="YCookers Logo">
+        <h1>YCookers</h1>
+    </div>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Login.html">Login</a>
+        <a href="Categories.html"> Recipes Categories</a>
+        <a href="Add Recipes.html ">Add Recipes</a>
+    </nav>
+</header>
+    <div>
+        <h1 class="til">Sweets Recipes</h1>
+        <div class="recipe-container">
+
+            <!-- Cupcake -->
+            <div class="card recipe-card">
+                <img src="ck.jfif" class="card-img-top" alt="Cupcake">
+                <div class="card-body">
+                    <h5 class="recipe-title">Cupcake</h5>
+                    <p class="recipe-description">Delicious caramel cupcake topped with smooth caramel frosting.</p>
+                    <span class="read-more" data-bs-toggle="collapse" href="#collapseCupcake" role="button" aria-expanded="false" aria-controls="collapseCupcake">
+                        Read More
+                    </span>
+                    <div class="collapse collapse-content" id="collapseCupcake">
+                        <p><strong>Ingredients:</strong></p>
+                        <ul>
+                            <li>1 ½ cups all-purpose flour</li>
+                            <li>1 cup sugar</li>
+                            <li>½ cup butter, softened</li>
+                            <li>½ cup milk</li>
+                            <li>2 eggs</li>
+                            <li>1 tsp vanilla extract</li>
+                            <li>Caramel sauce for topping</li>
+                        </ul>
+                        <p><strong>Instructions:</strong></p>
+                        <p>Preheat oven to 350°F (175°C). In a bowl, cream together the butter and sugar. Add eggs one at a time, then stir in the vanilla. Combine flour and baking powder, add to the creamed mixture and mix well. Finally, stir in the milk until the batter is smooth. Pour or spoon batter into the prepared muffin cups. Bake for 20 to 25 minutes. Let cupcakes cool before frosting with caramel sauce.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cheesecake -->
+            <div class="card recipe-card">
+                <img src="ch.jfif" class="card-img-top" alt="Cheesecake">
+                <div class="card-body">
+                    <h5 class="recipe-title">Cheesecake</h5>
+                    <p class="recipe-description">Creamy cheesecake with a buttery graham cracker crust.</p>
+                    <span class="read-more" data-bs-toggle="collapse" href="#collapseCheesecake" role="button" aria-expanded="false" aria-controls="collapseCheesecake">
+                        Read More
+                    </span>
+                    <div class="collapse collapse-content" id="collapseCheesecake">
+                        <p><strong>Ingredients:</strong></p>
+                        <ul>
+                            <li>1 ½ cups graham cracker crumbs</li>
+                            <li>¼ cup melted butter</li>
+                            <li>24 oz cream cheese, softened</li>
+                            <li>1 cup sugar</li>
+                            <li>3 large eggs</li>
+                            <li>1 tsp vanilla extract</li>
+                            <li>1 cup sour cream</li>
+                        </ul>
+                        <p><strong>Instructions:</strong></p>
+                        <p>Preheat oven to 325°F (165°C). Combine graham cracker crumbs and melted butter, and press into the bottom of a 9-inch springform pan. In a large bowl, beat the cream cheese and sugar until smooth. Add eggs one at a time, then stir in the vanilla. Mix in the sour cream until smooth. Pour the filling into the crust. Bake for 50-60 minutes or until the center is almost set. Let cool before refrigerating for at least 4 hours before serving.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tiramisu -->
+            <div class="card recipe-card">
+                <img src="tr.jfif" class="card-img-top" alt="Tiramisu">
+                <div class="card-body">
+                    <h5 class="recipe-title">Tiramisu</h5>
+                    <p class="recipe-description">Classic Italian dessert layered with coffee-soaked ladyfingers and mascarpone cream.</p>
+                    <span class="read-more" data-bs-toggle="collapse" href="#collapseTiramisu" role="button" aria-expanded="false" aria-controls="collapseTiramisu">
+                        Read More
+                    </span>
+                    <div class="collapse collapse-content" id="collapseTiramisu">
+                        <p><strong>Ingredients:</strong></p>
+                        <ul>
+                            <li>6 egg yolks</li>
+                            <li>¾ cup sugar</li>
+                            <li>1 cup mascarpone cheese</li>
+                            <li>1 ½ cups heavy cream</li>
+                            <li>2 cups brewed coffee, cooled</li>
+                            <li>24 ladyfingers</li>
+                            <li>Cocoa powder for dusting</li>
+                        </ul>
+                        <p><strong>Instructions:</strong></p>
+                        <p>In a large bowl, whisk together egg yolks and sugar until thick and pale. Add mascarpone cheese and mix until smooth. In another bowl, whip heavy cream until stiff peaks form. Gently fold whipped cream into the mascarpone mixture. Dip ladyfingers into the coffee and layer in a dish. Spread half of the mascarpone mixture over the ladyfingers. Repeat with another layer of coffee-dipped ladyfingers and the remaining mascarpone mixture. Refrigerate for at least 4 hours. Dust with cocoa powder before serving.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cookies -->
+            <div class="card recipe-card">
+                <img src="coo.jfif" class="card-img-top" alt="Cookies">
+                <div class="card-body">
+                    <h5 class="recipe-title">Cookies</h5>
+                    <p class="recipe-description">Chewy chocolate chip cookies with a crisp edge and soft center.</p>
+                    <span class="read-more" data-bs-toggle="collapse" href="#collapseCookies" role="button" aria-expanded="false" aria-controls="collapseCookies">
+                        Read More
+                    </span>
+                    <div class="collapse collapse-content" id="collapseCookies">
+                        <p><strong>Ingredients:</strong></p>
+                        <ul>
+                            <li>2 ¼ cups all-purpose flour</li>
+                            <li>1 tsp baking soda</li>
+                            <li>1 cup butter, softened</li>
+                            <li>¾ cup sugar</li>
+                            <li>¾ cup brown sugar</li>
+                            <li>2 tsp vanilla extract</li>
+                            <li>2 large eggs</li>
+                            <li>2 cups chocolate chips</li>
+                        </ul>
+                        <p><strong>Instructions:</strong></p>
+                        <p>Preheat oven to 375°F (190°C). In a bowl, combine flour and baking soda. In another large bowl, cream together butter, sugar, and brown sugar until light and fluffy. Add eggs one at a time, then stir in vanilla. Gradually add the flour mixture and mix until combined. Stir in chocolate chips. Drop by rounded tablespoons onto ungreased baking sheets. Bake for 9-11 minutes or until golden brown. Let cool on wire racks.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 YCookers. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrees - YCookers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        nav a:hover {
+            color: #d09a4c;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .til {
+            font-family: 'Brush Script MT', cursive;
+            color: #8b5e3c;
+            margin-top: 20px;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .recipe-card {
+            margin: 20px;
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.5em;
+            color: black;
+            width: 18rem;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .recipe-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .recipe-title {
+            font-family: 'Brush Script MT', cursive;
+            color: black;
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #cf9b77;
+            text-align: center;}
+			
+        .recipe-description {
+            font-family: Comic Sans MS;
+            font-size: 0.6em;
+            color: #777;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            font-size: 1em;
+            color: #d09a4c;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .collapse-content {
+            font-family: Comic Sans MS;
+            font-size: 0.5em;
+            text-align: left;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.jfif" alt="YCookers Logo">
+        <h1>YCookers</h1>
+    </div>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Login.html">Login</a>
+        <a href="Categories.html">Recipes Categories</a>
+        <a href="Add Recipes.html">Add Recipes</a>
+    </nav>
+</header>
+
+<div>
+    <h1 class="til">Entrees Recipes</h1>
+    <div class="recipe-container">
+
+        <!-- Mushroom Soup -->
+        <div class="card recipe-card">
+            <img src="ms.jfif" class="card-img-top" alt="Mushroom Soup">
+            <div class="card-body">
+                <h5 class="recipe-title">Mushroom Soup</h5>
+                <p class="recipe-description">A rich and creamy mushroom soup perfect for any meal.</p>
+                <span class="read-more" data-bs-toggle="collapse" href="#collapseMushroomSoup" role="button" aria-expanded="false" aria-controls="collapseMushroomSoup">
+                    Read More
+                </span>
+                <div class="collapse collapse-content" id="collapseMushroomSoup">
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>1 lb mushrooms, sliced</li>
+                        <li>1 onion, chopped</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>4 cups vegetable broth</li>
+                        <li>1 cup heavy cream</li>
+                        <li>2 tbsp olive oil</li>
+                        <li>Salt and pepper to taste</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <p>In a large pot, heat olive oil over medium heat. Add onions and garlic and sauté until translucent. Add mushrooms and cook until softened. Pour in the vegetable broth and bring to a boil. Reduce heat and simmer for 15 minutes. Blend the soup until smooth, return to heat, and stir in the heavy cream. Season with salt and pepper. Serve hot.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lentil Soup -->
+        <div class="card recipe-card">
+            <img src="ad.jfif" class="card-img-top" alt="Lentil Soup">
+            <div class="card-body">
+                <h5 class="recipe-title">Lentil Soup</h5>
+                <p class="recipe-description">Hearty and flavorful lentil soup packed with vegetables.</p>
+                <span class="read-more" data-bs-toggle="collapse" href="#collapseLentilSoup" role="button" aria-expanded="false" aria-controls="collapseLentilSoup">
+                    Read More
+                </span>
+                <div class="collapse collapse-content" id="collapseLentilSoup">
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>1 cup dried lentils</li>
+                        <li>1 carrot, chopped</li>
+                        <li>1 celery stalk, chopped</li>
+                        <li>1 onion, chopped</li>
+                        <li>3 cloves garlic, minced</li>
+                        <li>4 cups vegetable broth</li>
+                        <li>1 can diced tomatoes</li>
+                        <li>2 tbsp olive oil</li>
+                        <li>1 tsp cumin</li>
+                        <li>Salt and pepper to taste</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <p>Heat olive oil in a large pot over medium heat. Add onions, carrots, and celery and sauté until tender. Add garlic and cumin, cook for another minute. Stir in lentils, vegetable broth, and diced tomatoes. Bring to a boil, then reduce heat and simmer for 30 minutes or until lentils are tender. Season with salt and pepper. Serve warm.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fresh Salad -->
+        <div class="card recipe-card">
+            <img src="fs.jfif" class="card-img-top" alt="Fresh Salad">
+            <div class="card-body">
+                <h5 class="recipe-title">Fresh Salad</h5>
+                <p class="recipe-description">A crisp and refreshing salad with a variety of fresh vegetables.</p>
+                <span class="read-more" data-bs-toggle="collapse" href="#collapseFreshSalad" role="button" aria-expanded="false" aria-controls="collapseFreshSalad">
+                    Read More
+                </span>
+                <div class="collapse collapse-content" id="collapseFreshSalad">
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>2 cups mixed greens</li>
+                        <li>1 cucumber, sliced</li>
+                        <li>1 bell pepper, chopped</li>
+                        <li>1 cup cherry tomatoes, halved</li>
+                        <li>¼ cup red onion, thinly sliced</li>
+                        <li>¼ cup balsamic vinaigrette</li>
+                        <li>Salt and pepper to taste</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <p>In a large bowl, combine mixed greens, cucumber, bell pepper, cherry tomatoes, and red onion. Drizzle with balsamic vinaigrette and toss to coat. Season with salt and pepper. Serve immediately.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chicken Fries -->
+        <div class="card recipe-card">
+            <img src="fr.jfif" class="card-img-top" alt="Chicken Fries">
+            <div class="card-body">
+                <h5 class="recipe-title">Chicken Fries</h5>
+                <p class="recipe-description">Crispy and savory chicken fries perfect for a quick snack.</p>
+                <span class="read-more" data-bs-toggle="collapse" href="#collapseChickenFries" role="button" aria-expanded="false" aria-controls="collapseChickenFries">
+                    Read More
+                </span>
+                <div class="collapse collapse-content" id="collapseChickenFries">
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>1 lb chicken breasts, cut into strips</li>
+                        <li>1 cup flour</li>
+                        <li>1 tsp paprika</li>
+                        <li>1 tsp garlic powder</li>
+                        <li>1 tsp onion powder</li>
+                        <li>1 tsp salt</li>
+                        <li>½ tsp black pepper</li>
+                        <li>2 eggs, beaten</li>
+                        <li>1 cup breadcrumbs</li>
+                        <li>Vegetable oil for frying</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <p>In a shallow bowl, mix flour with paprika, garlic powder, onion powder, salt, and pepper. Dip chicken strips into the flour mixture, then the beaten eggs, and finally coat with breadcrumbs. Heat oil in a skillet over medium heat. Fry chicken strips until golden brown and cooked through, about 5-7 minutes per side. Drain on paper towels. Serve with your favorite dipping sauce.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 YCookers. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
